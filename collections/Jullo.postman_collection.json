@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "1741c3e4-4a32-4048-a778-da04ba557e4c",
+		"name": "Jullo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "init wallet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customer_xid",
+							"value": "ea0212d3-abd6-406f-8c67-868e814a2436",
+							"type": "string"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/init",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"init"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "init wallet",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "customer_xid",
+									"value": "ea0212d3-abd6-406f-8c67-868e814a2436",
+									"type": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/init",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"init"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\"data\":{\"token\":\"3e0da17b9d1a42cb8529de8d1cbcc748\"},\"status\":\"success\"}"
+				}
+			]
+		},
+		{
+			"name": "view wallet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1178cfb0597a41bcb5912248c88ee277",
+						"type": "string"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"wallet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "view wallet",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6d13234a6fb6476bb988fc4581fb91d7",
+								"type": "string"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"wallet"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"wallet\": {\n            \"balance\": 3100,\n            \"enabled_at\": \"Thu, 30 Dec 2021 00:00:00 GMT\",\n            \"id\": \"c83d0b89-31c9-4a41-8b13-313313ff6e3e\",\n            \"owned_by\": \"ea0212d3-abd6-406f-8c67-868e814a2436\",\n            \"status\": \"enabled\"\n        }\n    },\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "enable wallet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1178cfb0597a41bcb5912248c88ee277",
+						"type": "string"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"wallet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "enable wallet",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "6d13234a6fb6476bb988fc4581fb91d7",
+								"type": "string"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"wallet"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"wallet\": {\n            \"balance\": 0,\n            \"enabled_at\": \"Thu, 30 Dec 2021 00:00:00 GMT\",\n            \"id\": \"c83d0b89-31c9-4a41-8b13-313313ff6e3e\",\n            \"owned_by\": \"ea0212d3-abd6-406f-8c67-868e814a2436\",\n            \"status\": \"enabled\"\n        }\n    },\n    \"status\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "deposit wallet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1178cfb0597a41bcb5912248c88ee277",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "100",
+							"type": "string"
+						},
+						{
+							"key": "reference_id",
+							"value": "50535246-dcb2-4929-8cc9-004ea06f5241",
+							"type": "string"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/wallet/deposits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"wallet",
+						"deposits"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deposit wallet",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "8146a05fb2004bf8b0fa56269525fbf8",
+								"type": "string"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "1000",
+									"type": "string"
+								},
+								{
+									"key": "reference_id",
+									"value": "50535246-dcb2-4929-8cc9-004ea06f5241",
+									"type": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/wallet/deposits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"wallet",
+								"deposits"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"deposit\": {\n            \"amount\": 1000,\n            \"deposited_at\": \"Thu, 30 Dec 2021 08:07:08 GMT\",\n            \"deposited_by\": \"b3928dd7-33a1-495d-9b11-74ca1b49ff13\",\n            \"id\": \"0d3ad16b-5fae-4f72-9eea-6411d5b185e4\",\n            \"reference_id\": \"0d3ad16b-5fae-4f72-9eea-6411d5b185e4\",\n            \"status\": \"success\"\n        }\n    },\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "withdrawls wallet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1178cfb0597a41bcb5912248c88ee277",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "100",
+							"type": "string"
+						},
+						{
+							"key": "reference_id",
+							"value": "50535246-dcb2-4929-8cc9-004ea06f5244",
+							"type": "string"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/wallet/withdrawals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"wallet",
+						"withdrawals"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "deposit wallet",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "8146a05fb2004bf8b0fa56269525fbf8",
+								"type": "string"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "amount",
+									"value": "1000",
+									"type": "string"
+								},
+								{
+									"key": "reference_id",
+									"value": "50535246-dcb2-4929-8cc9-004ea06f5241",
+									"type": "string"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/wallet/deposits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"wallet",
+								"deposits"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"deposit\": {\n            \"amount\": 100,\n            \"deposited_at\": \"Thu, 30 Dec 2021 09:44:11 GMT\",\n            \"deposited_by\": \"c83d0b89-31c9-4a41-8b13-313313ff6e3e\",\n            \"id\": \"50535246-dcb2-4929-8cc9-004ea06f5244\",\n            \"reference_id\": \"50535246-dcb2-4929-8cc9-004ea06f5244\",\n            \"status\": \"success\"\n        }\n    },\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "disabled wallet",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "8146a05fb2004bf8b0fa56269525fbf8",
+						"type": "string"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"wallet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "disabled wallet",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "8146a05fb2004bf8b0fa56269525fbf8",
+								"type": "string"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/wallet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"wallet"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"wallet\": {\n            \"balance\": 0,\n            \"disabled_at\": \"Thu, 30 Dec 2021 00:00:00 GMT\",\n            \"id\": \"b3928dd7-33a1-495d-9b11-74ca1b49ff13\",\n            \"owned_by\": \"ea0212d3-abd6-406f-8c67-868e814a2436\",\n            \"status\": \"disabled\"\n        }\n    },\n    \"status\": \"Success\"\n}"
+				}
+			]
+		}
+	]
+}
