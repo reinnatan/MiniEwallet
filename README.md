@@ -4,5 +4,5 @@
 - install all dependency using command ```pip3 install -r requirement.txt```
 - running application using command ```python3 main.py```
 
-#collections postman
+# collections postman
 - collection postman put in directory ```collections```
