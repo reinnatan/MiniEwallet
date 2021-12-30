@@ -149,7 +149,7 @@ class EWalletController:
                 }
             })
 
-        if ewallet.balance -amount_parse < 0:
+        if ewallet.balance -amount_parse <= 0:
             return jsonify({
                 "status": "failed",
                 "data": {
